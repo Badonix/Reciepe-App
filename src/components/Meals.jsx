@@ -1,7 +1,7 @@
 import { useGlobalContext } from "../context";
 import { AiOutlineHeart } from "react-icons/ai";
 const Meals = () => {
-  const { loading, meals, selectMeal } = useGlobalContext();
+  const { loading, meals, selectMeal, addToFavorites } = useGlobalContext();
   if (loading) {
   }
   if (meals.length < 1) {
@@ -25,7 +25,12 @@ const Meals = () => {
             />
             <footer className="ftr">
               <h4>{title}</h4>
-              <button className="like-btn">
+              <button
+                onClick={() => {
+                  addToFavorites(idMeal);
+                }}
+                className="like-btn"
+              >
                 <AiOutlineHeart />
               </button>
             </footer>

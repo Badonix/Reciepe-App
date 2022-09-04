@@ -316,3 +316,42 @@ ul {
   background-color:var(--red-dark);
   color:var(--white)
 }
+
+/* Favorites */
+.favorites{
+  background-color: var(--black);
+  color:var(--white);
+  padding:1rem 0;
+}
+.favorites-content{
+  width:var(--view-width);
+  max-width: var(--max-width);
+  margin:0 auto;
+}
+.favorites-container {
+  display: flex;
+  align-items: center;
+  gap:0.5rem;
+  flex-wrap: wrap;
+}
+.favorite-item{
+  text-align: center;
+}
+.favorites-img{
+  width:60px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  cursor: pointer;
+}
+.remove-btn{
+  margin-top:0.25rem;
+  background-color: transparent;
+  color:var(--white);
+  border: transparent;
+  cursor: pointer;
+  font-size:.8rem;
+  transition: var(--transition);
+}
+.remove-btn:hover{
+color:var(--red-dark)
+}
