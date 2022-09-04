@@ -23,9 +23,9 @@ body{
   --primary-200: #b4d3fe;
   --primary-300: #82b6fd;
   --primary-400: #5098fc;
-  --primary-500: #03449d;
+  --primary-500: #000000;
   --primary-600: #034caf;
-  --primary-700: #02367d;
+  --primary-700: #7d0202;
   --primary-800: #01214b;
   --primary-900: #000b19;
 
@@ -155,8 +155,8 @@ ul {
   box-shadow: var(--shadow-3);
 }
 .btn-hipster {
-  color: var(--primary-500);
-  background: var(--primary-200);
+  color: var(--white);
+  background: var(--red-dark);
 }
 .btn-hipster:hover {
   color: var(--white);
@@ -204,13 +204,15 @@ ul {
 /* Meals */
 .single-meal{
   background-color:rgb(252, 252, 252);
+  border: 1px solid black;
   color:var(--textColor);
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow-2);
   transition:var(--transition)
 }
 .single-meal:hover{
-  box-shadow:var(--shadow-4)
+  box-shadow:var(--shadow-4);
+  background-color:var(--grey-200)
 }
 .single-meal img{
   height:15rem;
@@ -228,6 +230,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  border-top:1px solid black;
 }
 .like-btn{
   background:transparent;
@@ -281,10 +284,11 @@ ul {
   display: grid;
   place-items: center;
   transition:var(--transition);
-  z-index:100;
+  z-index: 2;
 }
 .modal-container{
   width:80vw;
+  z-index:100;
   max-width:800px;
   background:var(--white);
   overflow: scroll;
@@ -355,3 +359,4 @@ ul {
 .remove-btn:hover{
 color:var(--red-dark)
 }
+

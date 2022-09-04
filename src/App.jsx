@@ -6,6 +6,7 @@ import Modal from "./components/Modal";
 import Search from "./components/Search";
 function App() {
   const { showModal, favorites } = useGlobalContext();
+
   return (
     <main>
       <Search />

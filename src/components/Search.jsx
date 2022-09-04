@@ -2,7 +2,7 @@ import { useGlobalContext } from "../context";
 import { useState } from "react";
 const Search = () => {
   const [text, setText] = useState("");
-  const { setSearchTerm, fetchRandomMeal } = useGlobalContext();
+  const { fetchList, setSearchTerm, fetchRandomMeal } = useGlobalContext();
   const handleChange = (e) => {
     setText(e.target.value);
   };
@@ -30,6 +30,9 @@ const Search = () => {
         />
         <button className="btn" type="submit">
           Search
+        </button>
+        <button className="btn" onClick={fetchList} type="submit">
+          All
         </button>
         <button
           onClick={handleRandomMeal}

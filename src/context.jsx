@@ -30,7 +30,6 @@ const AppProvider = ({ children }) => {
     }
     setSelectedMeal(meal);
     setShowModal(true);
-    console.log(idMeal);
   };
 
   const fetchMeals = async (url) => {
@@ -59,11 +58,15 @@ const AppProvider = ({ children }) => {
     if (!searchTerm) return;
     fetchMeals(`${allMealsUrl}${searchTerm}`);
   }, [searchTerm]);
+  const fetchList = () => {
+    let alph = "abcdefghijklmnopqrstuvwxyz".split("");
+    let letter = alph[Math.floor(Math.random() * 26)];
+    fetchMeals(allMealsUrl + letter);
+  };
   const closeModal = () => {
     setShowModal(false);
   };
   const addToFavorites = (idMeal) => {
-    console.log(idMeal);
     const alreadyFavorite = favorites.find((meal) => meal.idMeal === idMeal);
     if (alreadyFavorite) return;
     const meal = meals.find((meal) => meal.idMeal === idMeal);
@@ -90,6 +93,7 @@ const AppProvider = ({ children }) => {
         removeFromFavorites,
         addToFavorites,
         favorites,
+        fetchList,
       }}
     >
       {children}
