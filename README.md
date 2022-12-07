@@ -1,3 +1,6 @@
+# See live version here
+https://receptebis-app.netlify.app
+
 # Reciepe app using React.js
 
 This project was created from fcc react project based course and got some features added
